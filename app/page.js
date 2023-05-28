@@ -318,9 +318,9 @@ export default function Home() {
           </CarButtonsWrapper>
 
           <CarBrands>
-            <div class="_container">
-              <div class="grid-wrapper">
-                <div id="item-1" class="grid-item">
+            <div className="_container">
+              <div className="grid-wrapper">
+                <div id="item-1" className="grid-item">
                   <Image
                     src="/images/alto.png"
                     width={593}
@@ -328,7 +328,7 @@ export default function Home() {
                     alt="carbrand"
                   />
                 </div>
-                <div id="item-2" class="grid-item">
+                <div id="item-2" className="grid-item">
                   {" "}
                   <Image
                     src="/images/ertiga.png"
@@ -337,7 +337,7 @@ export default function Home() {
                     alt="carbrand"
                   />
                 </div>
-                <div id="item-3" class="grid-item">
+                <div id="item-3" className="grid-item">
                   {" "}
                   <Image
                     src="/images/vitara.png"
@@ -346,7 +346,7 @@ export default function Home() {
                     alt="carbrand"
                   />
                 </div>
-                <div id="item-4" class="grid-item">
+                <div id="item-4" className="grid-item">
                   {" "}
                   <Image
                     src="/images/super.png"
@@ -355,7 +355,7 @@ export default function Home() {
                     alt="carbrand"
                   />
                 </div>
-                <div id="item-5" class="grid-item">
+                <div id="item-5" className="grid-item">
                   {" "}
                   <Image
                     src="/images/dzire.png"
