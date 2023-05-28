@@ -4,7 +4,7 @@ import React from "react";
 import { styled } from "styled-components";
 function Header() {
   return (
-    <div>
+    <>
       <NavWrapper>
         <Nav>
           <LogoWrapper>
@@ -32,7 +32,7 @@ function Header() {
           </LinksWrapper>
         </Nav>
       </NavWrapper>
-    </div>
+    </>
   );
 }
 
