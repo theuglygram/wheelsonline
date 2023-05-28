@@ -10,7 +10,7 @@ import Newsletter from "./components/universal/newsletter";
 import Downloadapp from "./components/universal/downloadapp";
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
       {/* ---------------------------- first Hero section------------------------- */}
       <ManageHero>
@@ -377,7 +377,7 @@ export default function Home() {
       {/* -------------------------------newsletter section----------------------------------- */}
       <Newsletter />
       <Footer />
-    </main>
+    </>
   );
 }
 
