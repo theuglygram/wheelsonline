@@ -11,6 +11,7 @@ import Downloadapp from "./components/universal/downloadapp";
 export default function Home() {
   return (
     <main>
+      <Footer />
       <Header />
       {/* ---------------------------- first Hero section------------------------- */}
       <ManageHero>
@@ -376,7 +377,6 @@ export default function Home() {
       <Blog />
       {/* -------------------------------newsletter section----------------------------------- */}
       <Newsletter />
-      <Footer />
     </main>
   );
 }
