@@ -1,8 +1,7 @@
 "use client";
-
+import { styled } from "styled-components";
 import Image from "next/image";
 import Header from "./components/navigation/header";
-import { styled } from "styled-components";
 import { Button, Paragraph } from "./styling/styled-components/globalstyle";
 import Footer from "./components/navigation/footer";
 import Blog from "./components/universal/blog";
