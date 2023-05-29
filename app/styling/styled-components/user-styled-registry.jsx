@@ -1,11 +1,7 @@
 "use client";
 
-import { useState, ReactNode, ReactElement } from "react";
-import {
-  ServerStyleSheet,
-  StyleSheetManager,
-  ThemeProvider,
-} from "styled-components";
+import { useState } from "react";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
 export function useStyledRegistry() {
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
@@ -18,11 +14,11 @@ export function useStyledRegistry() {
     return <>{styles}</>;
   };
 
-  const StyledComponentsRegistry = ({ children }: { children: ReactNode }) => (
+  const StyledComponentsRegistry = ({ children }) => (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      {children as ReactElement}
+      {children}
     </StyleSheetManager>
   );
 
-  return [StyledComponentsRegistry, styledComponentsFlushEffect] as const;
+  return [StyledComponentsRegistry, styledComponentsFlushEffect];
 }
