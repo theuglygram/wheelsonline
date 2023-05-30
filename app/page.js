@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Carousel from "react-bootstrap/Carousel";
 import { styled } from "styled-components";
 import Image from "next/image";
 import Header from "./components/navigation/header";
@@ -8,94 +10,145 @@ import Footer from "./components/navigation/footer";
 import Blog from "./components/universal/blog";
 import Newsletter from "./components/universal/newsletter";
 import Downloadapp from "./components/universal/downloadapp";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function Home() {
   return (
     <main>
       <Header />
+      <Carousel>
+        <Carousel.Item>
+          <ManageHero>
+            <HeroWrapper>
+              <LeftSection>
+                <Trust>#1 trusted app in play store</Trust>
+
+                <ManageCar>
+                  manage your car payment easily with wheels
+                  <span>
+                    <Image
+                      src="/icons/swirlvector.svg"
+                      height={160}
+                      width={160}
+                      alt="vector"
+                    />
+                  </span>
+                </ManageCar>
+                <Description>
+                  Start your business today by joining our marketplace where You
+                  can own a car while you drive and also earn good money.
+                </Description>
+
+                <RegButtonWrapper>
+                  <SignUpBtn>signup as a driver</SignUpBtn>
+                  <BuyBtn>buy a car</BuyBtn>
+                  <StarSp>
+                    <Image
+                      src="/icons/star.svg"
+                      height={40}
+                      width={40}
+                      alt="star"
+                    />
+                  </StarSp>
+                </RegButtonWrapper>
+
+                <PartnersSection>
+                  <span>global partners:</span>
+
+                  <Partners>
+                    <span>
+                      <Image
+                        src="/icons/google.svg"
+                        height={35}
+                        width={35}
+                        alt="partnerlogo"
+                      />
+                    </span>{" "}
+                    <span>
+                      <Image
+                        src="/icons/cisco.svg"
+                        height={35}
+                        width={35}
+                        alt="partnerlogo"
+                      />
+                    </span>{" "}
+                    <span>
+                      <Image
+                        src="/icons/leadway.svg"
+                        height={35}
+                        width={35}
+                        alt="partnerlogo"
+                      />
+                    </span>{" "}
+                    <span>
+                      <Image
+                        src="/icons/toyota.svg"
+                        height={35}
+                        width={35}
+                        alt="partnerlogo"
+                      />
+                    </span>{" "}
+                  </Partners>
+                </PartnersSection>
+              </LeftSection>
+              <RightSection>
+                <Image
+                  src="/images/pickup.png"
+                  height={1063}
+                  width={616}
+                  alt="pick up image"
+                />
+              </RightSection>
+            </HeroWrapper>
+          </ManageHero>
+        </Carousel.Item>
+        <Carousel.Item>
+          <OwnitHero>
+            <OwnWrapper>
+              <OwnContent>
+                <OwnWrap>
+                  <OwnTextContent>
+                    <OwnTitle>
+                      Own it with wheels. Join the world of car owners
+                    </OwnTitle>
+                    <OwnDesc>
+                      we are a trusted brand and we ensures drivers, workers
+                      gets the best car payment with our ease payment scheme
+                    </OwnDesc>
+                  </OwnTextContent>
+
+                  <OtherSect>
+                    <SignUpBtn>Select your car</SignUpBtn>
+                    <SupportWrapper>
+                      <SupportTxt>
+                        <Image
+                          src="/vectors/check.svg"
+                          width={20}
+                          height={20}
+                          alt="checkmark"
+                        />
+                        24/7 support
+                      </SupportTxt>
+                      <SupportTxt>
+                        <Image
+                          src="/vectors/check.svg"
+                          width={20}
+                          height={20}
+                          alt="checkmark"
+                        />
+                        tested and trusted partners
+                      </SupportTxt>
+                    </SupportWrapper>
+                  </OtherSect>
+                </OwnWrap>
+              </OwnContent>
+            </OwnWrapper>
+          </OwnitHero>
+        </Carousel.Item>
+      </Carousel>
       {/* ---------------------------- first Hero section------------------------- */}
-      <ManageHero>
-        <HeroWrapper>
-          <LeftSection>
-            <Trust>#1 trusted app in play store</Trust>
 
-            <ManageCar>
-              manage your car payment easily with wheels
-              <span>
-                <Image
-                  src="/icons/swirlvector.svg"
-                  height={160}
-                  width={160}
-                  alt="vector"
-                />
-              </span>
-            </ManageCar>
-            <Description>
-              Start your business today by joining our marketplace where You can
-              own a car while you drive and also earn good money.
-            </Description>
+      {/* ------------------------first hero slider component------------------------ */}
 
-            <RegButtonWrapper>
-              <SignUpBtn>signup as a driver</SignUpBtn>
-              <BuyBtn>buy a car</BuyBtn>
-              <StarSp>
-                <Image
-                  src="/icons/star.svg"
-                  height={40}
-                  width={40}
-                  alt="star"
-                />
-              </StarSp>
-            </RegButtonWrapper>
-
-            <PartnersSection>
-              <span>global partners:</span>
-
-              <Partners>
-                <span>
-                  <Image
-                    src="/icons/google.svg"
-                    height={35}
-                    width={35}
-                    alt="partnerlogo"
-                  />
-                </span>{" "}
-                <span>
-                  <Image
-                    src="/icons/cisco.svg"
-                    height={35}
-                    width={35}
-                    alt="partnerlogo"
-                  />
-                </span>{" "}
-                <span>
-                  <Image
-                    src="/icons/leadway.svg"
-                    height={35}
-                    width={35}
-                    alt="partnerlogo"
-                  />
-                </span>{" "}
-                <span>
-                  <Image
-                    src="/icons/toyota.svg"
-                    height={35}
-                    width={35}
-                    alt="partnerlogo"
-                  />
-                </span>{" "}
-              </Partners>
-            </PartnersSection>
-          </LeftSection>
-          <RightSection>
-            <Image
-              src="/images/pickup.png"
-              height={1063}
-              width={616}
-              alt="pick up image"
-            />
-          </RightSection>
-        </HeroWrapper>
-      </ManageHero>
       {/* --------------------second hero section--------------------------------- */}
       <MakeMoneyHero>
         <MoneyHeroWrapper>
@@ -310,62 +363,34 @@ export default function Home() {
             </p>
           </ChoseMiniSection>
 
-          <CarButtonsWrapper>
-            <CarBtn>Toyota Cars</CarBtn>
-            <CarBtn>Suzuki cars</CarBtn>
-            <CarBtn>bmw Cars</CarBtn>
-            <CarBtn>Volkswagen Cars</CarBtn>
-          </CarButtonsWrapper>
-
           <CarBrands>
-            <div className="_container">
-              <div className="grid-wrapper">
-                <div id="item-1" className="grid-item">
-                  <Image
-                    src="/images/alto.png"
-                    width={593}
-                    height={324}
-                    alt="carbrand"
-                  />
-                </div>
-                <div id="item-2" className="grid-item">
-                  {" "}
-                  <Image
-                    src="/images/ertiga.png"
-                    width={593}
-                    height={324}
-                    alt="carbrand"
-                  />
-                </div>
-                <div id="item-3" className="grid-item">
-                  {" "}
-                  <Image
-                    src="/images/vitara.png"
-                    width={363}
-                    height={241}
-                    alt="carbrand"
-                  />
-                </div>
-                <div id="item-4" className="grid-item">
-                  {" "}
-                  <Image
-                    src="/images/super.png"
-                    width={363}
-                    height={241}
-                    alt="carbrand"
-                  />
-                </div>
-                <div id="item-5" className="grid-item">
-                  {" "}
-                  <Image
-                    src="/images/dzire.png"
-                    width={363}
-                    height={241}
-                    alt="carbrand"
-                  />
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/images/car1.png"
+              width={675}
+              height={414}
+              alt="carbrand"
+            />
+
+            <Image
+              src="/images/car2.png"
+              width={759}
+              height={423}
+              alt="carbrand"
+            />
+
+            <Image
+              src="/images/car3.png"
+              width={927}
+              height={365}
+              alt="carbrand"
+            />
+
+            <Image
+              src="/images/car4.png"
+              width={759}
+              height={423}
+              alt="carbrand"
+            />
           </CarBrands>
         </ChooseVehicleWrapper>
       </ChooseVehicleHero>
@@ -484,6 +509,61 @@ const Partners = styled.div`
     background: #fff;
     clip-path: polygon(50% 0%, 80% 10%, 80% 90%, 50% 100%, 20% 90%, 20% 10%);
   }
+`;
+
+// second style for first hero
+
+const OwnitHero = styled.div`
+  background: url("/images/ownit.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+`;
+const OwnWrapper = styled.div``;
+const OwnContent = styled.div`
+  /* padding: 0 20px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 100vh;
+`;
+const OtherSect = styled.div``;
+const OwnTitle = styled.h4`
+  font-family: Open Sans;
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+`;
+const OwnDesc = styled.div`
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+`;
+const OwnWrap = styled.div`
+  max-width: 649px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+`;
+const OwnTextContent = styled.div`
+  background: #5937205e;
+  border-radius: 20px;
+  max-width: 649px;
+  padding: 40px 20px;
+`;
+const OwnBtn = styled.div``;
+const SupportWrapper = styled.div`
+  margin-top: 100px;
+`;
+const SupportTxt = styled.div`
+  color: #fff;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin: 5px 0;
 `;
 
 // second hero styling-----------------------------------
@@ -773,5 +853,10 @@ const CarBtn = styled.button`
   text-transform: capitalize;
 `;
 
-const CarBrands = styled.div``;
-// ---------------------------------- download app section
+const CarBrands = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  img {
+    max-width: 100%;
+  }
+`;

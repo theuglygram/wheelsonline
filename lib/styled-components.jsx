@@ -14,15 +14,11 @@ export function useStyledComponentsRegistry() {
     return <>{styles}</>;
   };
 
-  const StyledComponentsRegistry = ({
-    children,
-  }: {
-    children: React.ReactNode;
-  }) => (
+  const StyledComponentsRegistry = ({ children }) => (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      {children as React.ReactElement}
+      {children}
     </StyleSheetManager>
   );
 
-  return [StyledComponentsRegistry, styledComponentsFlushEffect] as const;
+  return [StyledComponentsRegistry, styledComponentsFlushEffect];
 }

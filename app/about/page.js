@@ -267,6 +267,7 @@ const HeroWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 0 20px;
 `;
 const HeroSection = styled.div`
   max-width: 1440px;
