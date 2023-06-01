@@ -93,8 +93,8 @@ export default function Home() {
               <RightSection>
                 <Image
                   src="/images/pickup.png"
-                  height={1063}
-                  width={616}
+                  height={751}
+                  width={436}
                   alt="pick up image"
                 />
               </RightSection>
@@ -144,10 +144,38 @@ export default function Home() {
             </OwnWrapper>
           </OwnitHero>
         </Carousel.Item>
-      </Carousel>
-      {/* ---------------------------- first Hero section------------------------- */}
 
-      {/* ------------------------first hero slider component------------------------ */}
+        <Carousel.Item>
+          <RentCarHero>
+            <RentCarHeroWrapper>
+              <>
+                <RentCarcontent>
+                  <OwnTitle>
+                    need a car for rent or lease? apply to drive!
+                  </OwnTitle>
+                  <OwnDesc>
+                    we are a trusted brand and we ensures drivers, workers gets
+                    the best car payment with our ease payment scheme
+                  </OwnDesc>
+                </RentCarcontent>
+
+                <OtherSect>
+                  <SelectCar>Select your car</SelectCar>
+                  <LearnMore>
+                    learn more{" "}
+                    <Image
+                      src="/icons/downarrow.svg"
+                      height={50}
+                      width={50}
+                      alt="arrow"
+                    />
+                  </LearnMore>
+                </OtherSect>
+              </>
+            </RentCarHeroWrapper>
+          </RentCarHero>
+        </Carousel.Item>
+      </Carousel>
 
       {/* --------------------second hero section--------------------------------- */}
       <MakeMoneyHero>
@@ -366,29 +394,29 @@ export default function Home() {
           <CarBrands>
             <Image
               src="/images/car1.png"
-              width={675}
-              height={414}
+              width={464}
+              height={244}
               alt="carbrand"
             />
 
             <Image
               src="/images/car2.png"
-              width={759}
-              height={423}
+              width={400}
+              height={226}
               alt="carbrand"
             />
 
             <Image
               src="/images/car3.png"
-              width={927}
-              height={365}
+              width={507}
+              height={352}
               alt="carbrand"
             />
 
             <Image
               src="/images/car4.png"
-              width={759}
-              height={423}
+              width={624}
+              height={300}
               alt="carbrand"
             />
           </CarBrands>
@@ -408,6 +436,8 @@ export default function Home() {
 
 const ManageHero = styled.div`
   background: #d9e8f4;
+  height: 100vh;
+  padding: 50px 0;
 `;
 const HeroWrapper = styled.div`
   display: grid;
@@ -415,7 +445,7 @@ const HeroWrapper = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 0 20px;
   place-items: center;
 
   @media only screen and (max-width: 900px) {
@@ -427,6 +457,11 @@ const RightSection = styled.div`
   img {
     max-width: 100%;
     height: auto;
+  }
+  @media only screen and (max-width: 425px) {
+    img {
+      display: none;
+    }
   }
 `;
 
@@ -522,7 +557,7 @@ const OwnitHero = styled.div`
 `;
 const OwnWrapper = styled.div``;
 const OwnContent = styled.div`
-  /* padding: 0 20px; */
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -536,11 +571,16 @@ const OwnTitle = styled.h4`
   font-size: 48px;
   font-weight: 800;
   color: #fff;
+  text-transform: capitalize;
+  @media only screen and (max-width: 425px) {
+    font-size: 32px;
+  }
 `;
 const OwnDesc = styled.div`
   font-size: 16px;
-  font-weight: 800;
   color: #fff;
+  text-transform: capitalize;
+  margin-top: 20px;
 `;
 const OwnWrap = styled.div`
   max-width: 649px;
@@ -564,6 +604,40 @@ const SupportTxt = styled.div`
   gap: 1em;
   align-items: center;
   margin: 5px 0;
+`;
+
+// third style first hero
+const RentCarHero = styled.div`
+  background: url("/images/rentbackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+`;
+const RentCarHeroWrapper = styled.div`
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 504px;
+  width: 100%;
+`;
+
+const RentCarcontent = styled.div``;
+const LearnMore = styled.div`
+  margin-top: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+`;
+
+const SelectCar = styled(Button)`
+  background: #fff;
+  color: #0066b4;
+  margin-top: 30px;
 `;
 
 // second hero styling-----------------------------------
@@ -771,7 +845,7 @@ const HowitWorksCardHolder = styled.div`
   @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 525px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -856,7 +930,13 @@ const CarBtn = styled.button`
 const CarBrands = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
   img {
     max-width: 100%;
+  }
+
+  @media only screen and (max-width: 765px) {
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 `;
